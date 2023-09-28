@@ -1,0 +1,79 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  font-family: monospace;
+}
+
+header {
+  background-color: gold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+
+.reset-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  color: #000000;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  border-radius: 0px;
+  width: 5rem;
+  height: 2.5rem;
+  position: relative;
+  transition: 0.3s;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.reset-btn::before,
+.reset-btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 1px solid #000000;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.reset-btn::before {
+  top: -2px;
+  left: -2px;
+}
+
+.reset-btn::after {
+  top: 2px;
+  left: 2px;
+}
+
+.reset-btn:hover::before,
+.reset-btn:hover::after {
+  top: 0;
+  left: 0;
+}
+
+#counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 12rem;
+}
+
+.gradient {
+  background: linear-gradient(90deg, gold 0%, white 0%);
+  user-select: none;
+}
